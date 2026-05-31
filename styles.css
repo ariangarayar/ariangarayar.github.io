@@ -150,34 +150,25 @@ dd {
 }
 
 .avatar-link::before {
-  inset: 4px;
+  inset: 3px;
   z-index: 2;
   border-radius: 50%;
-  background:
-    repeating-conic-gradient(
-      from 18deg at 50% 52%,
-      transparent 0 24deg,
-      rgba(255, 235, 166, 0.06) 25deg,
-      rgba(246, 191, 91, 0.72) 26deg,
-      transparent 28deg 55deg
-    );
+  background: radial-gradient(circle, rgba(255, 235, 166, 0.08) 18%, rgba(246, 191, 91, 0.34) 63%, transparent 76%);
   mix-blend-mode: screen;
-  opacity: 0.74;
-  mask-image: radial-gradient(circle, transparent 0 28%, #000 47%, transparent 76%);
-  animation: avatarRaySpin 8s ease-in-out infinite alternate;
+  opacity: 0.64;
+  animation: avatarLightningGlow 4.6s ease-in-out infinite alternate;
 }
 
 .avatar-link::after {
-  top: 13px;
-  right: 20px;
+  inset: 4px;
   z-index: 3;
-  width: 23px;
-  height: 72px;
-  background: linear-gradient(180deg, #fff0b5, var(--gold) 46%, rgba(216, 135, 45, 0.28));
-  clip-path: polygon(49% 0, 100% 0, 64% 38%, 91% 38%, 18% 100%, 40% 56%, 5% 56%);
-  filter: drop-shadow(0 0 5px rgba(246, 191, 91, 0.92));
-  opacity: 0.78;
-  animation: avatarBoltFlash 3.8s ease-in-out infinite;
+  border-radius: 50%;
+  background: url("assets/avatar-lightning.gif") center / 132% 132% no-repeat;
+  filter: sepia(1) saturate(3.6) hue-rotate(348deg) brightness(1.38) drop-shadow(0 0 5px rgba(246, 191, 91, 0.9));
+  mix-blend-mode: screen;
+  opacity: 0.92;
+  mask-image: radial-gradient(circle, #000 0 67%, transparent 73%);
+  animation: avatarLightningDrift 5.4s ease-in-out infinite alternate;
 }
 
 .avatar-link img {
@@ -191,33 +182,25 @@ dd {
   box-shadow: 0 0 0 7px rgba(246, 191, 91, 0.08), 0 18px 42px rgba(0, 0, 0, 0.38);
 }
 
-@keyframes avatarRaySpin {
+@keyframes avatarLightningGlow {
   from {
-    transform: rotate(-7deg) scale(0.97);
-    opacity: 0.46;
+    transform: scale(0.96);
+    opacity: 0.38;
   }
 
   to {
-    transform: rotate(9deg) scale(1.05);
-    opacity: 0.82;
+    transform: scale(1.04);
+    opacity: 0.72;
   }
 }
 
-@keyframes avatarBoltFlash {
-  0%,
-  18%,
-  27%,
-  100% {
-    opacity: 0.18;
+@keyframes avatarLightningDrift {
+  from {
+    transform: rotate(-8deg) scale(1.08);
   }
 
-  21%,
-  24% {
-    opacity: 0.9;
-  }
-
-  62% {
-    opacity: 0.56;
+  to {
+    transform: rotate(10deg) scale(1.18);
   }
 }
 
