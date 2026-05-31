@@ -998,6 +998,12 @@ dd {
   font-weight: 900;
 }
 
+.about-page .eyebrow,
+.about-page .about-role,
+.about-page .social-list span {
+  color: var(--gold);
+}
+
 .about-copy {
   display: grid;
   gap: 14px;
@@ -1012,7 +1018,8 @@ dd {
 
 .cert-grid {
   display: grid;
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+  gap: 16px;
   margin-top: 24px;
 }
 
@@ -1021,44 +1028,55 @@ dd {
   border: 1px solid rgba(246, 191, 91, 0.24);
   border-radius: var(--radius);
   background: rgba(17, 15, 12, 0.88);
-  transition: border-color 160ms ease, background 160ms ease;
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
 }
 
-.cert-entry[open] {
-  border-color: rgba(246, 191, 91, 0.58);
+.cert-entry:hover {
+  border-color: rgba(246, 191, 91, 0.64);
   background: rgba(17, 15, 12, 0.96);
+  transform: translateY(-3px);
+}
+
+.cert-preview {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 10;
+  padding: 8px;
+  border-bottom: 1px solid rgba(246, 191, 91, 0.2);
+  background: #080705;
+}
+
+.cert-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: calc(var(--radius) - 2px);
+  object-fit: contain;
 }
 
 .cert-card {
   display: grid;
-  grid-template-columns: 92px minmax(0, 1fr) auto;
-  gap: 16px;
-  align-items: center;
+  gap: 11px;
   min-width: 0;
-  padding: 16px;
-  list-style: none;
-  cursor: pointer;
-  transition: background 160ms ease;
+  padding: 14px;
 }
 
-.cert-card::-webkit-details-marker {
-  display: none;
-}
-
-.cert-card:hover,
-.cert-card:focus-visible {
-  background: rgba(246, 191, 91, 0.11);
+.cert-heading {
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr);
+  gap: 11px;
+  align-items: center;
 }
 
 .cert-mark {
   display: grid;
   place-items: center;
-  min-height: 62px;
+  min-height: 54px;
   padding: 8px;
-  border: 1px solid rgba(115, 216, 210, 0.3);
+  border: 1px solid rgba(246, 191, 91, 0.42);
   border-radius: var(--radius);
-  color: var(--cyan);
-  background: rgba(115, 216, 210, 0.06);
+  color: var(--gold);
+  background: rgba(246, 191, 91, 0.08);
   font-size: 0.82rem;
   font-weight: 900;
   text-align: center;
@@ -1081,48 +1099,22 @@ dd {
   font-weight: 900;
 }
 
-.cert-body > span {
-  margin-top: 5px;
+.cert-card p {
+  min-height: 4.4em;
+  margin: 0;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   line-height: 1.5;
-}
-
-.cert-action {
-  color: var(--cyan);
-  font-size: 0.78rem;
-  font-weight: 900;
-  white-space: nowrap;
-}
-
-.cert-entry[open] .cert-action {
-  color: var(--gold);
-}
-
-.cert-preview {
-  padding: 0 16px 16px;
-  border-top: 1px solid rgba(246, 191, 91, 0.2);
-}
-
-.cert-preview img {
-  display: block;
-  width: 100%;
-  max-height: 640px;
-  margin-top: 16px;
-  border: 1px solid rgba(246, 191, 91, 0.26);
-  border-radius: var(--radius);
-  background: #080705;
-  object-fit: contain;
 }
 
 .cert-credential {
   display: inline-flex;
-  margin-top: 12px;
+  justify-self: start;
   padding: 9px 11px;
-  border: 1px solid rgba(115, 216, 210, 0.36);
+  border: 1px solid rgba(246, 191, 91, 0.46);
   border-radius: var(--radius);
-  color: var(--cyan);
-  background: rgba(115, 216, 210, 0.06);
+  color: var(--gold);
+  background: rgba(246, 191, 91, 0.08);
   font-size: 0.82rem;
   font-weight: 900;
   transition: border-color 160ms ease, background 160ms ease;
@@ -1130,8 +1122,8 @@ dd {
 
 .cert-credential:hover,
 .cert-credential:focus-visible {
-  border-color: var(--cyan);
-  background: rgba(115, 216, 210, 0.12);
+  border-color: var(--gold);
+  background: rgba(246, 191, 91, 0.16);
 }
 
 .about-rail {
@@ -1350,14 +1342,16 @@ dd {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .cert-card {
-    grid-template-columns: 72px minmax(0, 1fr);
-    gap: 12px;
-    padding: 13px;
+  .cert-grid {
+    grid-template-columns: 1fr;
   }
 
-  .cert-action {
-    grid-column: 2;
+  .cert-card {
+    padding: 12px;
+  }
+
+  .cert-card p {
+    min-height: 0;
   }
 
   .about-rail {
