@@ -6,6 +6,7 @@ Página personal estática para publicar resoluciones de laboratorios de redes y
 
 - `index.html`: inicio tipo blog con sidebar, búsqueda, filtros y lista de resoluciones.
 - `tags.html`: índice interactivo de etiquetas con buscador y acceso a máquinas relacionadas.
+- `sobre-mi.html`: perfil profesional con certificaciones, contacto y comunidad.
 - `writeup.html`: plantilla individual para abrir cada máquina en una pestaña nueva.
 - `styles.css`: tema oscuro/dorado, fondo animado, layout responsive y estilo de artículo.
 - `app.js`: listado de las 10 máquinas, búsqueda, filtros y rail lateral.
