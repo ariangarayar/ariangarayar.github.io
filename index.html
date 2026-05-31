@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Ast4 - writeups, redes y ciberseguridad."
+    >
+    <title>Ast4 | Resoluciones de ciberseguridad</title>
+    <link rel="icon" type="image/jpeg" href="assets/avatar.jpg">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="blog-home">
+    <aside class="site-sidebar" aria-label="Perfil de Ast4">
+      <a class="avatar-link" href="index.html" aria-label="Ir al inicio">
+        <img src="assets/avatar.jpg" alt="Avatar de Ast4">
+      </a>
+
+      <h1>Ast4</h1>
+      <p class="sidebar-bio">
+        Estudiante Sanmarquino apasionado por la ciberseguridad y redes.
+      </p>
+
+      <nav class="side-nav" aria-label="Navegación principal">
+        <a class="active" href="index.html">Inicio</a>
+        <a href="#writeups">Resoluciones</a>
+        <a href="tags.html">Tags</a>
+        <a href="https://www.linkedin.com/in/arian-navid-garayar-alverca563aba2a7/?skipRedirect=true" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://www.instagram.com/arian.garayar/" target="_blank" rel="noreferrer">Instagram</a>
+      </nav>
+    </aside>
+
+    <div class="page-frame">
+      <header class="topbar">
+        <a href="index.html">Inicio</a>
+        <label class="top-search">
+          <span>Buscar resolución</span>
+          <input id="postSearch" type="search" placeholder="Buscar máquina, técnica o plataforma..." autocomplete="off">
+        </label>
+      </header>
+
+      <main class="blog-layout" id="writeups">
+        <section class="feed-column" aria-label="Entradas de resoluciones">
+          <div class="feed-intro">
+            <p class="eyebrow">Bitácora de laboratorio</p>
+            <h2>Resoluciones ordenadas paso a paso</h2>
+            <p>
+              Cada entrada resume el laboratorio y abre una página individual con
+              escenario, reconocimiento, explotación, escalada y capturas del proceso.
+            </p>
+          </div>
+
+          <div class="filter-row" aria-label="Filtrar por dificultad">
+            <button class="filter-btn active" type="button" data-filter="todas">Todas</button>
+            <button class="filter-btn" type="button" data-filter="Muy Fácil">Muy fácil</button>
+            <button class="filter-btn" type="button" data-filter="Fácil">Fácil</button>
+            <button class="filter-btn" type="button" data-filter="Medio">Medio</button>
+            <button class="filter-btn" type="button" data-filter="Difícil">Difícil</button>
+          </div>
+
+          <div class="post-feed" id="postFeed"></div>
+        </section>
+
+        <aside class="right-rail" aria-label="Resumen del sitio">
+          <section class="rail-block">
+            <h2>Actualizado recientemente</h2>
+            <div class="rail-list" id="recentList"></div>
+          </section>
+
+          <a
+            class="gif-rail"
+            href="tags.html"
+            aria-label="Abrir etiquetas"
+          >
+            <img src="assets/black-clover-banner.gif" alt="Animación de Black Clover">
+            <span>Explorar etiquetas</span>
+          </a>
+
+        </aside>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
