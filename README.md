@@ -16,6 +16,7 @@ Página personal estática para publicar resoluciones de laboratorios de redes y
 - `assets/anime-bedroom-bg.jpg`: fondo animado del dormitorio nocturno.
 - `assets/ast4-writeup-cover.png`: portada común para las tarjetas de resoluciones.
 - `assets/black-clover-banner.gif`: animación lateral enlazada desde la sección de etiquetas.
+- `assets/certifications/`: certificados visuales del perfil profesional.
 - `assets/notion-writeups/`: capturas completas de las máquinas.
 
 ## Máquinas incluidas
